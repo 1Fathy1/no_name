@@ -1,6 +1,3 @@
-second task : 
-create login page[front end]
-
 note : 
 
 don't make the header , 
