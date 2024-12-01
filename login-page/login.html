@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8"> <!-- مش بيشوفها المستخدم -->
+    <meta name="viewport" content="while = device-width,initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<div class="contenter">
+<div class="form-box">
+    <div class="form-header">
+     <h2>SigunUp</h2>
+    </div>
+    <h3>Login</h3>
+    <form>
+        <div class="input-box">
+            <input type="email" placeholder="Email address" required>
+        </div>
+        <div class="input-box">
+         <input type="password" placeholder="password" required>
+         <!-- //required لازم يملي الخانه الفاضية قبل مضغط سبمت -->
+
+        </div>
+        <div>
+            <a href="#" class="forgot-password"> Forgot passowrd?</a>
+            <button type="submit" class="bu" >Login</button>
+        </div>
+    </form>
+</div>
+</div>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+          }
+          .contenter{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 100;
+               max-width: 400px;
+
+          }
+          .form-box{
+            background-color: #fff;
+           border-radius: 8px;
+           box-shadow: 0px 8px rgba(0, 0, 0, 0);
+           overflow: hidden;
+           width: 100%;
+          }
+          .form-header {
+    background-color: #4f87ff;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.form-header h2 {
+    margin: 8px;
+}
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+form {
+    padding: 20px;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #4f87ff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.bu {
+    width: 100%;
+    padding: 10px;
+    background-color: #4f87ff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bu:hover {
+    background-color: #3b6dd8;
+}
+
+</style>
+</body>
+</html>
