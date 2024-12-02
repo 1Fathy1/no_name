@@ -1,0 +1,306 @@
+/* use Google Font */
+/* 
+First Font
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+Second Font{
+font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+} */
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.welcom{
+    /* background-color: red; */
+    background-image: url("/uploads/hotal/download.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    padding: 0 10%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcom-text {
+    /* text-decoration: #eee underline solid ; */
+    color: rgb(255, 255, 255);
+    padding: 20px 0 ;
+    text-align: center;
+}
+
+.par{
+    color: #fff;
+    padding: 15px 20px;
+    font-size: small;
+    opacity: 0.7;
+}
+
+.service , 
+.room-section {
+    /* padding: ; */
+    /* background-color: rgb(124, 124, 201); */
+    padding: 20px 0 ;
+    width: 90%;
+    height: fit-content;
+    margin: 0 5%;
+
+}
+
+ div.type{
+  color: yellowgreen;
+  padding-right: 30px;
+  border-bottom: 3px solid  ;
+  font-size: 20px ;
+  
+}
+
+.service div.box{
+    margin-top: 50px;
+    width: 49%;
+    height: fit-content;
+    padding: 40px;
+    display: inline-block;
+    /* background-color: red; */
+}
+
+p#head-service{
+    font-size: 20px; 
+    text-wrap: 600;
+}
+
+.room-section div.room{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    display: flex;
+    margin: 60px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.room-section .room div.image  ,
+.room-section .room div.details {
+    width: 50%;
+  
+}
+
+.room-section .room div.image {
+    background-image: url("/uploads/hotal/R.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: aqua;
+    position: relative;
+    transition: all 0.7s;
+    
+}
+
+.room-section .room div.image:hover{
+    transform: scale(1.2,1.2);
+    /* border-radius: 10px; */
+}
+
+.room-section .room div.details  {
+    background-color: #66A182; 
+    color: #eee;
+    position: relative;
+  z-index: 1;
+}
+
+.details div.list , 
+.details div.description {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+
+li{
+      font-family:Arial, Helvetica, sans-serif; 
+      font-size: 14px;
+      margin: 5px;
+}
+
+.details div.description li.item1 {
+    list-style-image: url("/tmp-folder/wifi_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png");
+}
+
+.details div.description {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.details div.price{
+    margin: 10px 0 ;
+    padding: 10px 0 ;
+}
+.details p.price-text{
+  font-family: initial;
+  font-size: 20px;
+  color: #6bff56;
+}
+
+.details .price-text span {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #eee;
+
+}
+
+
+  
+
+.details .price .btn-link{
+    text-decoration: none;
+    color: #30392f;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: 40px;
+    margin-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.details .price .btn-link::before , 
+.details .price .btn-link::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.details .price .btn-link::before {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.details .price .btn-link:hover::before {
+    opacity: 0;
+    transform: scale(0,0);
+}
+
+.details .price .btn-link::after {
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+    opacity: 0;
+}
+
+.details .price .btn-link:hover::after{
+    opacity: 1;
+    transform: scale(1,1);
+
+}
+
+/* Booking Hotel */
+
+.booking-hotel{
+    background-color: #4e4b4b;
+    width: 80%;
+    height: fit-content;
+    margin: 0 10%;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgb(0,0,0,0.25);
+    color: #fff;
+
+}
+
+.booking-hotel .booking-form > div {
+    /* background-color: #66A182; */
+    margin-bottom: 20px;
+    position: relative;
+    /* background-color: #a8e6a1; */
+}
+
+.booking-hotel .booking-form input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding:  0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+
+
+.booking-hotel .booking-form label{
+    display: inline-block;
+    text-wrap: 200;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.booking-hotel .booking-form input[type="text"]  + label {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: 0.2s;
+    color: #9b9b9b;
+}
+
+.booking-hotel .booking-form  input::placeholder {
+    color: transparent;
+}
+
+
+.booking-hotel .booking-form  input:focus{
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.booking-hotel .booking-form  input:focus ~ label {
+    top: -20px;
+    left: -5px;
+    color: #11998e;
+}
+
+.booking-hotel .booking-form  input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    left: -5px;
+}
+
+
+
+
+
+
+
+
+
+/**/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
