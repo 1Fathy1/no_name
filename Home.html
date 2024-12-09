@@ -6,11 +6,18 @@
     <title>Home</title>
 </head>
 <body>
-    <div class="imgg">
-        <img src="photo_2024-12-04_18-46-33.jpg" alt="img " width="100%">
+     <div class="display">
+        <img src="photo_2_2024-12-08_11-02-10.jpg" alt="img " width="1000px" height="500px"> 
+        <img src="photo_4_2024-12-08_11-02-10.jpg" alt="img " width="1000px" height="500px">
+    </div>
+        <div class="content">
+            <img src="photo_٢٠٢٤-١٢-٠٨_١٢-١٣-٥٥.jpg" alt="img " width="1000px" height="500px" > 
+        <img src="photo_٢٠٢٤-١٢-٠٨_١٢-١٣-٢٥.jpg" alt="img " width="1000px" height="500px"> 
+        </div>
+       
          <div class="text">
             <h1>NIC AND COMFORTABLE PLACE TO STAY</h1>
-            <hr>
+            <hr> 
             
          <p>/Lorem ipsum dolor sit amet consectetur adipisicing elit . lusto est quos veniam 
             impedit numquam itaque voluptatum ,dicta asperiores accusamusn eilgendi neque ut 
@@ -21,7 +28,8 @@
          </center>
          
          </div>
-    </div>
+
+  
     <center>
         <section class="services-section">
             <h2>Services</h2>
@@ -48,11 +56,136 @@
                 </div>
             </div>
         </section>
+    <!-- من الصفحة التانية -->
     </center>
- 
+    <center>
+        <h2 class="header" >Services</h2>
+    </center>
+   
+    <div class="room-card">
+        <img src="photo_3_2024-12-08_11-02-10.jpg" alt="Luxury Room">
+        <div class="room-details">
+          <h2>Luxury Rooms</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem
+            repellendus maxime ullam tempore architecto provident unde expedita quam beatae.
+          </p>
+          <p class="price">$99.00 <span>/ Per Night</span></p>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="room-card">
+        <img src="photo_3_2024-12-08_11-02-10.jpg" alt="Luxury Room">
+        <div class="room-details">
+          <h2>Luxury Rooms</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem
+            repellendus maxime ullam tempore architecto provident unde expedita quam beatae.
+          </p>
+          <p class="price">$99.00 <span>/ Per Night</span></p>
+          <button>Book Now</button>
+        </div>
+      </div>
+
+    <!-- كود الفورم يبدا من هنا -->
+    <div class="booking-container">
+        <header class="header">
+            <img src="photo_2024-12-04_18-46-33.jpg" width="200px" >
+            <img src="photo_٢٠٢٤-١٢-٠٥_٠٧-٢٩-١٩.jpg" width="200px">
+            <img src="photo_٢٠٢٤-١٢-٠٥_٠٧-٣٠-١٩.jpg" width="200px"> 
+        </header>
+        <main>
+            <h1>Hotel Booking</h1>
+            <p>Experience something new every moment</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="myname@example.com" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="room-type">Room Type</label>
+                        <select id="room-type" required>
+                            <option value="">Please Select</option>
+                            <option value="single">Single</option>
+                            <option value="double">Double</option>
+                            <option value="suite">Suite</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" placeholder="e.g., 2" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="arrival-date">Arrival Date</label>
+                        <input type="date" id="arrival-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival-time">Arrival Time</label>
+                        <input type="time" id="arrival-time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input type="date" id="departure-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Free Pickup?</label>
+                    <div>
+                        <input type="radio" id="pickup-yes" name="pickup" value="yes">
+                        <label for="pickup-yes">Yes Please! - Pick me up on arrival</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="pickup-no" name="pickup" value="no">
+                        <label for="pickup-no">No Thanks - I'll make my own way there</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="flight-number">Flight Number</label>
+                    <input type="text" id="flight-number" placeholder="Flight Number">
+                </div>
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <textarea id="special-requests" rows="4" placeholder="Write any special requests here"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </main>
+    </div> 
+        
     <style>
-        .imgg{
+         .display{
             position: relative;
+            margin: 0 auto;
+            float: right;
+            margin-left: 20px;
+            display: flex
+        } 
+        .content{
+            position: relative;
+            margin: 0 auto;
+            float: right;
+            margin-left: 20px;
+            display: flex
+            
         }
         .text{
             position: absolute;
@@ -138,6 +271,177 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* من الصفحة التانية */
+        .header{
+            text-align: center;
+            font-size: 1.5rem;
+            color: #f4b400;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+        }
+        
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.room-card {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room-card img {
+  width: 500px;
+  object-fit: cover;
+}
+
+.room-details {
+  padding: 30px;
+  width: 700px;
+  background-color: #333;
+  color: #fff;
+}
+
+.room-details h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.room-details p {
+  line-height: 1.6;
+}
+
+.room-details .price {
+  font-size: 24px;
+  color: #ffd700;
+  margin: 20px 0;
+}
+
+.room-details .price span {
+  font-size: 16px;
+  color: #fff;
+}
+
+.room-details button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.room-details button:hover {
+  background-color: #ffc107;
+}
+ 
+/* من هنا كود الفورم */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.booking-container {
+    width: 60%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header.header {
+    display: flex;
+    justify-content: space-between; /*بتخلي ف مسافات متساوية بين العناصر */
+    margin-bottom: 20px;
+}
+
+header.header img {
+    width: 32%;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #218838;
+}
+
+
     </style>
 </body>
 </html>
