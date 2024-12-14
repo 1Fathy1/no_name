@@ -72,5 +72,64 @@ CREATE TABLE Booking (
 
 
 
+-- insert data --
+
+
+-----------------
+-- destenation --
+-----------------
+
+INSERT INTO destenation (location, description, open_hours)
+VALUES
+  ('Ras Mohammed National Park, South Sinai, Egypt', 
+   'Ras Mohammed National Park is a protected area located at the southern tip of the Sinai Peninsula. It is renowned for its diverse marine life, beautiful coral reefs, and excellent diving and snorkeling opportunities. The park is a major attraction for nature lovers and underwater enthusiasts.', 
+   '08:00:00');
+
+
+-----------------
+---- hotels -----
+----------------- 
+
+INSERT INTO hotel (id, name, address, phone, email, destination_id)
+VALUES(
+   'Royal Savoy Sharm El Sheikh', 
+   'Sharm El Sheikh, Nabq Bay, South Sinai, Egypt', 
+   '+20 69 360 0777', 
+   'royalsavoy@somabay.com', 
+   1);
+
+
+-----------------
+---- services ---
+----------------- 
+
+INSERT INTO services (id, service, description, hotel_id)
+VALUES
+  (1, 'Free Wi-Fi', 'High-speed wireless internet access available throughout the hotel for all guests.', 1),
+  (2, 'Swimming Pool', 'An outdoor pool with stunning views of the Red Sea, perfect for relaxation.', 1),
+  (3, 'Spa and Wellness Center', 'A full-service spa offering massages, facials, and other wellness treatments.', 1),
+  (4, 'Private Beach', 'Exclusive access to a private beach with umbrellas, loungers, and beach activities.', 1),
+  (5, 'Fitness Center', 'A well-equipped gym with modern fitness equipment for guests to stay active.', 1),
+  (6, 'Restaurant and Bar', 'Multiple dining options with international cuisine and a bar offering refreshing drinks.', 1),
+  (7, 'Diving Center', 'A certified diving center offering courses and diving trips to explore the Red Sea marine life.', 1);
+
+
+-----------------
+----- image -----
+----------------- 
+
+INSERT INTO image (image_path, type, hotel_id, des_id)
+VALUES 
+('..\\uploads\\hotel\\Royal Savoy Sharm El Sheikh\\1.jpeg', 'hotel', 1, null), 
+('..\\uploads\\hotel\\Royal Savoy Sharm El Sheikh\\2.jpeg', 'hotel', 1, null);
+
+
+-- Select data 
+
+
+SELECT * FROM hotel WHERE id = 1;
+
+
+
 
 

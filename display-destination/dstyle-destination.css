@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.images{
+    background-color: red;
+    margin-bottom: 100px;
+}
+
+
+.images #img-1{
+    width: 100px;
+    height: 200px;
+}
+
+
+.title {
+    padding: 50px;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.title h3 {
+    font-size: 60px;
+    margin: 0;
+    
+}
+
+div.info h3.header {
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+div.info h3.header:hover {
+    text-shadow: 0px 0px 10px cyan , 
+                         0px 0px 20px cyan , 
+                         0px 0px 40px cyan ,
+                         0px 0px 80px cyan;
+}
+
+
+
+
+
+div.info{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 30px;
+    height: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 0.7s  ease;
+    margin-bottom: 80px;
+}
+
+div.info p.par {
+    padding-left: 20px; 
+    opacity: 0;
+    transition: all 0.4s 0.5s  ease; 
+}
+
+ div.info span {
+    color: rgb(215, 52, 236);
+    font-size: 20px;
+    transition: all 0.7s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

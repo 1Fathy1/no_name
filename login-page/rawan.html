@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Code</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .verification {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #C96868;
+        }
+
+        P {
+            font-weight: bold;
+            color: #FADFA1;
+        }
+
+        #verifi {
+            background-color: #A7E6FF;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #verifi:hover {
+            background-color: #B9E5E8;
+        }
+
+        .allInput {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            width: 40px;
+            height: 50px;
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid #dddddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input:focus {
+            border-color: #4A628A;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="verification">
+        <img src="lock.gif" alt="Lock Icon" width="70" height="50">
+        <h1>Verification Email</h1>
+        <p>Enter The Verification Code</p>
+        <div class="allInput">
+            <input class="input" type="text" maxlength="1" />
+            <input class="input" type="text" maxlength="1" />
+            <input class="input" type="text" maxlength="1" />
+            <input class="input" type="text" maxlength="1" />
+            <input class="input" type="text" maxlength="1" />
+            <input class="input" type="text" maxlength="1" />
+        </div>
+        <input type="button" id="verifi" name="verifi" value="Verifi">
+    </div>
+    </div>
+</body>
+
+</html>

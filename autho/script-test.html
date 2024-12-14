@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page For Test</title>
+</head>
+<body>
+
+
+
+    <form class="frm">
+        <input type="text" name="username" id="name" placeholder="yourname" value="fathy"><br><br> 
+        <input type="password" name="password" id="pass" placeholder="your password" value="9871"><br><br>
+         <input type="submit" value="Submit" name="submit">
+    </form>
+
+    <p class="demo"></p>
+
+
+
+    <script type="text/javascript">  
+        var frm = document.querySelector(".frm") ;     
+
+        frm.addEventListener('submit' , (e) => {
+          e.preventDefault(); 
+
+          // get form data . 
+          const frmData = new FormData(frm) ; 
+
+          // make url paramters 
+          const queryString = new URLSearchParams(frmData) + "&submit=true";
+
+          // make url 
+          const url = "login.php?" + queryString ; 
+
+          // make promise 
+          const prom = new Promise(  (resolve , reject) => {
+                // make xmlhttprequest  . 
+                const xhr = new XMLHttpRequest() ; 
+                 
+                 // xhr url 
+                xhr.open('GET' , url , true) ; 
+
+                // xhr onload 
+                xhr.onload =  () => {
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        resolve(xhr.responseText) ; 
+                    }else{
+                        reject("Error") ; 
+                    }
+                } ; 
+
+                xhr.onerror = () => {
+                    reject("Error in Network") ; 
+                };
+
+
+                xhr.send();
+                
+          }) ;
+
+          prom.then( (response) => {
+            console.log(JSON.parse(response)['status'] ) ; 
+          })
+
+          prom.catch((reject) => {
+            console.log(reject) ;
+          }); 
+
+
+        }) ; 
+        
+
+    </script>
+    
+</body>
+</html>
