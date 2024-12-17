@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Travel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .header img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .header .subscribe {
+            display: flex;
+            margin-top: 20px;
+        }
+        .header input[type="email"] {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .header button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #ff7f50;
+            color: white;
+            cursor: pointer;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: transparent;
+            z-index: 1000;
+            color: white;
+        }
+        .navbar h2 {
+            margin: 0;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ff7f50;
+        }
+        .recent-deals {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .recent-deals h2 {
+            margin: 0 0 20px 0;
+        }
+        .deals-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .deal {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 20%;
+            min-width: 150px;
+            max-width: 300px;
+            position: relative;
+        }
+        .deal img {
+            width: 100%;
+            height: auto;
+        }
+        .deal .info {
+            padding: 10px;
+            text-align: left;
+        }
+        .deal .info h3 {
+            margin: 0;
+            font-size: 1em;
+        }
+        .deal .info p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+            color: gray;
+        }
+        .deal .view-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .deal:hover .view-button {
+            display: block;
+        }
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 40px;
+        }
+        .footer ul li {
+            display: inline;
+        }
+        .footer ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .footer ul li a:hover {
+            color: #ff7f50;
+        }
+        .footer .brand {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="navbar">
+        <h2>Adventure Travel</h2>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#tourist-areas">Tourist Areas</a></li>
+            <li><a href="../login-page/login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <img alt="A beautiful adventure travel destination with lush greenery and a river" src="https://storage.googleapis.com/a1aa/image/qWfN9b5pVoyyYy00GZ7yfl6tp584xGwJfNBmGIr40pnbPgznA.jpg">
+        <div class="overlay">
+            <h1>UP TO 60% OFF ADVENTURE TRAVEL</h1>
+            <p>JOIN OVER 40,000 MEMBERS.</p>
+            <p>Get exclusive access to members-only deals on amazing adventure holidays by Search.</p>
+            <div class="subscribe">
+                <input placeholder="Enter your KeyWord" type="email">
+                <button>Go</button>
+            </div>
+        </div>
+    </div>
+    <div class="recent-deals" id="Deals">
+        <h2>Recent Deals</h2>
+        <div class="deals-container">     
+        </div>
+    </div>
+
+    <div class="recent-deals" id='Hotels'>
+        <h2>Popular Hotels</h2>
+        <div class="deals-container">
+        </div>
+    </div>
+
+    <div class="recent-deals " id="Places">
+        <h2>The most famous tourist places</h2>
+        <div class="deals-container">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="brand">Adventure Travel</div>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#tourist-areas">Tourist Areas</a></li>
+            <li><a href="../login-page/login.html">Login</a></li>
+        </ul>
+    </div>
+    <script>
+        function validateSearchInput(input) {
+            const trimmedInput = input.trim();
+
+            if (trimmedInput === "") {
+                return "Input cannot be empty.";
+            }
+
+            return "Valid input.";
+        }
+       
+        const searchInput = document.querySelector('.header input[type="email"]');
+       
+        const searchButton = document.querySelector('.header button');
+
+        searchButton.addEventListener('click', () => {
+            const validationMessage = validateSearchInput(searchInput.value);
+            if (validationMessage === "Valid input.") {
+                console.log("Search initiated with:", searchInput.value);
+            } else {
+                alert(validationMessage); 
+            }
+        });
+
+        function createDeal(dealData, id) {
+            const container = document.getElementById(id).querySelector('.deals-container');
+
+            const dealDiv = document.createElement("div");
+            dealDiv.className = "deal";
+
+            const img = document.createElement("img");
+            img.src = dealData.imageUrl;
+            img.alt = dealData.title;
+
+            const infoDiv = document.createElement("div");
+            infoDiv.className = "info";
+
+            const title = document.createElement("h3");
+            title.textContent = dealData.title;
+
+            const description = document.createElement("p");
+            description.textContent = dealData.description;
+
+            const viewButton = document.createElement("a");
+            viewButton.href = dealData.link;
+            viewButton.className = "view-button";
+            viewButton.textContent = "View Deal";
+
+            infoDiv.appendChild(title);
+            infoDiv.appendChild(description);
+            dealDiv.appendChild(img);
+            dealDiv.appendChild(infoDiv);
+            dealDiv.appendChild(viewButton);
+
+            container.appendChild(dealDiv);
+        }
+
+        const deal1 = {
+            title: "Patagonia Wilderness Trek",
+            description: "7 days from $1,299",
+            imageUrl: "https://storage.googleapis.com/a1aa/image/ZYJTDqdmPHaXPZe4EA1yRRwmrBJOfdGX0PRGhKDK2pIyHw5TA.jpg",
+            link: "#"
+        };
+
+        const deal2 = {
+            title: "Alaskan Adventure Cruise",
+            description: "10 days from $2,499",
+            imageUrl: "https://storage.googleapis.com/a1aa/image/ZYJTDqdmPHaXPZe4EA1yRRwmrBJOfdGX0PRGhKDK2pIyHw5TA.jpg",
+            link: "#"
+        };
+
+        createDeal(deal1, 'Hotels');
+        createDeal(deal2, 'Places');
+        createDeal(deal1, 'Hotels');
+        createDeal(deal2, 'Places');
+        createDeal(deal1, 'Deals');
+        createDeal(deal2, 'Deals');
+    </script>
+</body>
+</html>

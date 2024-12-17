@@ -82,16 +82,19 @@
         <h1>Verification Email</h1>
         <p>Enter The Verification Code</p>
         <div class="allInput">
-            <input class="input" type="text" maxlength="1" />
-            <input class="input" type="text" maxlength="1" />
-            <input class="input" type="text" maxlength="1" />
-            <input class="input" type="text" maxlength="1" />
-            <input class="input" type="text" maxlength="1" />
-            <input class="input" type="text" maxlength="1" />
+            <form class="_frnCode" method="POST">
+                <input class="input" name="digit1" type="text" maxlength="1" />
+                <input class="input" name="digit2" type="text" maxlength="1" />
+                <input class="input" name="digit3" type="text" maxlength="1" />
+                <input class="input" name="digit4" type="text" maxlength="1" />
+                <button type="submit" name="submit" class="bu" >Login</button>
+            </form>
+           
         </div>
-        <input type="button" id="verifi" name="verifi" value="Verifi">
     </div>
     </div>
+
+    <script src="code-script.js"></script>
 </body>
 
 </html>
