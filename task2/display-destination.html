@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dstyle-destination.css" />
+    <title>Display</title>
+    <style>
+      .gallary {
+        width: 50%;
+        height: 360px;
+        margin: 0 calc(50% / 2);
+        margin-bottom: 100px;
+        background-size: 100% 100%;
+        box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.25);
+        animation: BGanim 20s 0s linear infinite;
+      }
+      .show h1 {
+        /* background-color: #333; */
+        font-size: 30px;
+        font-family: monospace;
+        text-align: center;
+        margin: 10px 0;
+        color: #eee;
+        text-shadow: 0px 0px 15px rgb(199, 102, 23), 0px 0px 15px rgb(139, 68, 10), 0px 0px 15px rgb(214, 192, 174),
+        0px 0px 15px rgb(228, 235, 92);
+
+      }
+
+      @keyframes BGanim {
+        0% {
+          background-image: url("images/index.jpg");
+          box-shadow: 0 0 20px rgb(212, 97, 9);
+        }
+        25% {
+          background-image: url("images/index_blog_1.jpg");
+          box-shadow: 0 0 20px rgb(243, 164, 105);
+
+        }
+        50% {
+          background-image: url("images/index_blog_2.jpg");
+          box-shadow: 0 0 20px rgb(248, 205, 171);
+
+        }
+        75% {
+          background-image: url("images/index_blog_3.jpg");
+          box-shadow: 0 0 20px rgb(235, 215, 201);
+
+        }
+        100% {
+          background-image: url("images/index_1.jpg");
+          box-shadow: 0 0 20px rgb(245, 241, 237);
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Take it Form Main page -->
+    <!-- End-Header Take it Form Main page -->
+
+    <!-- Title of destination-->
+    <div class="title">
+      <h3>Evil</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ducimus,
+        animi,
+      </p>
+    </div>
+    <!-- End-Title -->
+
+    <!--Some of images -->
+    <div class="images">
+      <img id="img-1" src="images/gallery_1.jpg" alt="img" title="Evil" />
+      <img id="img-2" src="images/gallery_2.jpg" alt="img" title="Evil" />
+      <img id="img-3" src="images/gallery_3.jpg" alt="img" title="Evil" />
+      <img id="img-4" src="images/gallery_2.jpg" alt="img" title="Evil" />
+
+    </div>
+    <!--End-Some of images -->
+
+    <!--gallary -->
+    <div class="show">
+      <h1>يارب نعدي</h1>
+      <div class="gallary"></div>
+    </div>
+    <!--end-gallary -->
+
+    <!--Information for destitnation -->
+    <div class="info">
+      <div class="text">
+        <h3 class="header">
+          <span class="reg">▶</span>
+          Info
+        </h3>
+      </div>
+
+      <p class="par">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus natus
+        sapiente molestias porro. Minima quasi quaerat, inventore perspiciatis
+        itaque laboriosam laborum rem numquam adipisci sunt rerum odio impedit
+        repudiandae neque!
+      </p>
+    </div>
+    <!-- End-Information for destitnation -->
+
+    <!-- section virtual tour -->
+    <div class="vt">
+      <div class="text2" style="cursor: pointer;">
+        <h3 class="header2">
+          <span class="reg2">▶</span>
+          virtual tour
+        </h3>
+      </div>
+
+      <div id="virtualtour">
+        <!-- image 1 -->
+        <div class="imagevt" id="imgvt1"></div>
+        <!-- image 2 -->
+        <div class="imagevt" id="imgvt2"></div>
+      </div>
+    </div>
+    
+
+    <!-- section bookin travil----------------- -->
+    
+    <div id="booking">
+      <h1>
+        Booking travel
+      </h1>
+      <div id="bookingleft">
+        <label for="" style="margin-right: 20px;"> Phone</label>
+        <input type="text"> <br>
+        <label for=""> Number</label>
+        <input type="text"> <br>
+        <p style="margin-top: 20px;">choose from our services</p>
+        <input type="checkbox" id="chk1" class="chk"> <label for="chk1">servic1</label> <br>
+        <input type="checkbox" id="chk2" class="chk"> <label for="chk2">servic1</label> <br>
+        <input type="checkbox" id="chk3" class="chk"> <label for="chk3">servic1</label><br>
+        <input type="checkbox" id="chk4" class="chk"> <label for="chk4">servic1</label><br>
+        <input type="checkbox" id="chk5" class="chk"> <label for="chk5">servic1</label><br>
+        <input type="checkbox" id="chk6" class="chk"> <label for="chk6">servic1</label><br>
+  
+      </div>
+      <div id="bookingright">
+      <select name="" id="list1">
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+
+      </select> <br>
+      <select name="destination"  id="list2">
+        
+        <title>destination</title>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+        <option value="">Egypt</option>
+
+      </select>
+      </div>
+      <button id="btnbooking">Booking</button>
+
+    </div> 
+
+    <script src="script-destination.js"></script>
+  </body>
+</html>
