@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <div class="booking-container">
+        <header class="header">
+            <img src="photo_2024-12-04_18-46-33.jpg" width="200px" >
+            <img src="photo_٢٠٢٤-١٢-٠٥_٠٧-٢٩-١٩.jpg" width="200px">
+            <img src="photo_٢٠٢٤-١٢-٠٥_٠٧-٣٠-١٩.jpg" width="200px"> 
+        </header>
+        <main>
+            <h1>Hotel Booking</h1>
+            <p>Experience something new every moment</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="myname@example.com" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="room-type">Tourist Places</label>
+                        <select id="room-type" required>
+                            <option value="">Please Select</option>
+                            <option value="single">Pyramids</option>
+                            <option value="double">Waterfalls</option>
+                            <option value="suite">Egyptian Museum</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" placeholder="e.g., 2" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="arrival-date">Arrival Date</label>
+                        <input type="date" id="arrival-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival-time">Arrival Time</label>
+                        <input type="time" id="arrival-time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input type="date" id="departure-date" required>
+                </div>
+                <div class="form-group">
+                    <label>Free Pickup?</label>
+                    <div>
+                        <input type="radio" id="pickup-yes" name="pickup" value="yes">
+                        <label for="pickup-yes">Yes Please! - Pick me up on arrival</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="pickup-no" name="pickup" value="no">
+                        <label for="pickup-no">No Thanks - I'll make my own way there</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="flight-number">Flight Number</label>
+                    <input type="text" id="flight-number" placeholder="Flight Number">
+                </div>
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <textarea id="special-requests" rows="4" placeholder="Write any special requests here"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </main>
+    </div> 
+        
+
+    <!-- <label>Name</label>
+    <br>
+    <input type="text">
+    <input type="text">
+    <br>
+    <label>E-mail*</label>
+    <input type="email">
+    <br>
+    <label>Room Type</label>
+    <select>
+        <option>Room Type</option>
+        <option>val</option>
+        <option>val</option>
+        <option>val</option>
+    </select>
+    <br>
+    <label>Number of Guests</label>
+    <input type="text"> -->
+    <style>
+   /* .immg{
+   background-image: url(photo_2024-12-05_18-43-40.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+            background-position: center;
+   } */
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.booking-container {
+    width: 70%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header.header {
+    display: flex;
+    justify-content: space-between; /*بتخلي ف مسافات متساوية بين العناصر */
+    margin-bottom: 20px;
+}
+
+header.header img {
+    width: 32%;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #218838;
+}
+
+    </style>
+</body>
+</html>
