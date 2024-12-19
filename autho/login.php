@@ -3,6 +3,7 @@
     include("connectiondatabase.php");
     
     $response = [] ; 
+    $response['login_status'] = "false" ;
 
     if(isset($_GET['submit'])){
 
@@ -28,8 +29,11 @@
                 $response['status'] = "successful" ; 
                 $response['message'] = "Login successful!" ; 
                 
-                setcookie("userId" , $row['id'] , 60 * 60 , '/' ) ;
+                $_SESSION['name'] = $row['username'];
+                $_SESSION['email'] = $row['email'];
+                $response['login_status'] = "true" ; 
                 $userFound = true;
+
                 break;
             }
         }

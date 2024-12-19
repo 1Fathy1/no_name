@@ -43,20 +43,48 @@ function setData(obj){
 
 }
 
-function services(obj){
-
-    obj.forEach( e => {
-        console.log(e['service'] + "\n" + e['description']) ; 
-    });
+function addOption(text , id){
+    var option = document.createElement('option') ; 
+    option.text = text ;
+    option.value = id ;
+    document.querySelector('#room-type').appendChild(option) ;
 }
 
-function upload() {
+function services(obj){
+    // console.log(obj[0]['service']) ;
+    // console.log(obj[0]['description']) ;
+    var h3Service = document.querySelectorAll('h3');
+    var pService = document.querySelectorAll('.service p');
+    // console.log(pService) ; 
+    let id = 0 ; 
+    for(let i = 0 ; i < 4 ; i++){
+        h3Service[i].textContent = obj[i]['service'] ;
+        pService[i].textContent = obj[i]['description'] ;
+        id++;
+    }
+    
+    
+}
 
-    // // make url paramters 
-    const queryString = "hotelid=1&getdata=true";
+function desName(obj){
+    for(i in obj){
+        addOption(obj[i]['location'] , obj[i]['id']) ; 
+    }
+}
+
+(() => {
+
+    let params = new URLSearchParams(window.location.search) ; 
+    let id = params.get('id') ;
+    var queryString = "" ; 
+    if(!isNaN(id) && id.trim() !== ""){
+         queryString = `hotelid=${id}&getdata=true`;
+    }else{
+        return;
+    }
   
     // make url 
-    const url = "../servers/hotel.php?" + queryString ; 
+    const url = "hotel.php?" + queryString ; 
   
     // make promise 
     const prom = new Promise(  (resolve , reject) => {
@@ -86,13 +114,16 @@ function upload() {
     prom.then( (response) => {
 
         let data = JSON.parse(response) ; 
+        // console.log(data['hotel services']['services'][0]['service']);
+        // console.log(data['hotel services']['services'][0]['description']);
 
         if(data['status'] === "successful"){
 
             const hoteldata = data['hotel data']['data'] ;             // is object
             const hotelimages = data['hotel images']['images'] ;       // is array 
             const hotelservices = data['hotel services']['services'] ; // is array 
-
+            const location = data['destination name']['des-name'] ;
+            // console.log(location)
             // console.log(hoteldata);
             // console.log(hotelimages); //   ---> Done
             // console.log(hotelservices);
@@ -102,6 +133,8 @@ function upload() {
             setData(hoteldata) ;
             
             services(hotelservices);
+
+            desName(location);
      
         }else{
           
@@ -112,5 +145,4 @@ function upload() {
       console.log(reject) ;
     }); 
   
-};
-upload(); 
+})();

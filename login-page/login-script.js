@@ -42,7 +42,7 @@ frm.addEventListener('submit' , (e) => {
   prom.then( (response) => {
       let data = JSON.parse(response) ; 
       if(data['status'] === "successful"){
-        window.location = "../display-destination/Home.html" ; 
+        window.location = "../main-page/home.html" ; 
       }else{
         ems.innerHTML = data['status'] ;
       }

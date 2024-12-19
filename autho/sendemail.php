@@ -9,7 +9,7 @@
     $response = [] ;
     // $response['no Requset'] =['true'] ;
     function sedEmail($code , $email) {
-          $name = $_POST['username'] ; 
+          $name = $_POST['username'] ?? "New Password" ; 
         try{
             $mail = new PHPMailer();
      
@@ -49,34 +49,64 @@
     
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
-        $bytes = random_bytes(20);
-        $token = substr(bin2hex($bytes), 0, 20); 
+        $_SESSION['email'] = $email ; 
         $code = rand(1000, 9999);
+        $response['code'] = $code ;
+
         try{
-            $sql = "INSERT INTO  temp (token,code,user_email)  VALUES(:token,:code,:email);" ;
-            $stmt = $PDO->prepare($sql);
-            $stmt->bindParam(':token', $token);  
+            $fl = false ; 
+            do{
+                $sql =  "select * from temp where code = :code" ; 
+                $stmt = $PDO->prepare($sql); 
+                $stmt->bindParam(':code', $code);
+    
+                $stmt->execute();
+                if($stmt->rowCount()){
+                    $fl = true;
+                }else{
+                    $fl = false;
+                }
+            }while($fl);
+
+            $sql =  "select * from temp where user_email = :email" ; 
+            $stmt = $PDO->prepare($sql); 
             $stmt->bindParam(':email', $email);
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0){
+               
+                $deleteQuery = "DELETE FROM temp WHERE user_email = :email" ; 
+                $statment = $PDO->prepare($deleteQuery);
+                $statment->bindParam(':email', $email);
+                $statment->execute();
+            }
+
+            //  "INSERT INTO  temp (token,code,user_email)  VALUES(:token,:code,:email);" ;
+            $sql =  "INSERT INTO temp(password, code, user_email, username)
+                              VALUES (:pass ,:code , :email , :name_)" ; 
+            $stmt = $PDO->prepare($sql);
+            $pass = $_POST['password'] ?? 'no_password';
+            $name = $_POST['username'] ?? 'no_name';
+            $email = $_POST['email'];
+
+            $stmt->bindParam(':pass', $pass);  
             $stmt->bindParam(':code', $code);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':name_', $name);
+            
+          
 
             $stmt->execute();
 
             if($stmt){
-                if(true){
+                if(sedEmail($code , $email)){
                     $response['SQLstatus'] = "success";
                     $response['SQLmessage'] = "Email sent successfully";
                     $response['Data'] = json_encode(array(
-                        'code' => $code,
-                        'token' => $token
+                        'code' => $code
                     )) ;
+                    // header("Location: ../register-page/con-emil.html") ; 
                 } 
-            }else{
-                $response['SQLstatus'] = "Error";
-                $response['SQLmessage'] = "Email sent successfully";
-                $response['Data'] = json_encode(array(
-                    'code' => $code,
-                    'token' => $token
-                )) ;
             }
 
             }catch (PDOException $e){
@@ -87,6 +117,9 @@
             }
        
     }
+
+
+
     echo json_encode($response);
 
 ?>

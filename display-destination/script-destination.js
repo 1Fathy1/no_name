@@ -8,8 +8,6 @@ var fl = false ;
 btn.addEventListener("click" , function() {
    if(!fl){
       divText.style.height = '150px';
-      // display: inline-block;
-      // opacity: 1;
 
       text.style.opacity = 1 ; 
       btnReg.style.transform = 'rotate(90deg)' ; 

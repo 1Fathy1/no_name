@@ -10,6 +10,10 @@
  
      // Connection to  data base 
      $statusConectionDataBase = [] ; 
+
+     //
+     session_start();
+     session_create_id();
      try{
 
         // Server=db11184.public.databaseasp.net; Database=db11184; Uid=db11184; Pwd=Ks3@?Aj8z!7C; SslMode=Preferred;

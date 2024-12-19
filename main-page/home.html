@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="hotelInfoStyle.css" />
+    <script src="hotel.js"></script>
     <title>Adventure Travel</title>
     <style>
         body {
@@ -196,7 +201,7 @@
             <li><a href="#hotels">Hotels</a></li>
             <li><a href="#booking">Booking</a></li>
             <li><a href="#tourist-areas">Tourist Areas</a></li>
-            <li><a href="../login-page/login.html">Login</a></li>
+            <li><a href="../login-page/login.html" id="log-status">Login</a></li>
         </ul>
     </div>
     <div class="header">
@@ -211,11 +216,11 @@
             </div>
         </div>
     </div>
-    <div class="recent-deals" id="Deals">
+    <!-- <div class="recent-deals" id="Deals">
         <h2>Recent Deals</h2>
         <div class="deals-container">     
         </div>
-    </div>
+    </div> -->
 
     <div class="recent-deals" id='Hotels'>
         <h2>Popular Hotels</h2>
@@ -228,7 +233,245 @@
         <div class="deals-container">
         </div>
     </div>
-    <div class="footer">
+
+    <div class="_hotel-viwe">
+            <h1>Featured Hotels</h1>
+        
+            <!-- hotel information div section 1------ -->
+            <div id="div1" style="position: relative;">
+              <div id="icondiv">
+                <div id="header">
+                  <h3>Alex Hotel</h3>
+                <p>loream and hotel information</p>
+                </div>
+                <!-- <ul id="ul1">
+                  <li>feature 1</li>
+                  <li>feature 1</li>
+                  <li>feature 1</li>
+                </ul> -->
+                <div>
+                <div id="icon1" style="width: 30px; height: 50px; display: inline; margin: 0% 0% 0% 0%;">
+                  <ul class="listicon" style="margin: 0% 0% 0% 0%;">
+                    <li>
+                      <img
+                        src="icons/icons8-tree-96 (1).png"
+                        alt=""
+                        class="hotelIcon"
+                      />
+                    </li>
+                    <li>
+                      <div style="width: 100px; margin-top: 0%;"><p>private garden✖️</p></div>
+                    </li>
+                  </ul>
+                </div>
+                <div id="icon2" style="width: 30px; height: 50px; display: inline">
+                  <ul class="listicon">
+                    <li>
+                      <img src="icons/icons8-restauran-64.png" alt="" class="hotelIcon" />
+                    </li>
+                    <li>
+                      <div style="width: 100px"><p>luxury restauran✅</p></div>
+                    </li>
+                  </ul>
+                        </div>
+        
+                <div id="icon3" style="width: 30px; height: 50px; display: inline">
+                  <ul class="listicon">
+                    <li>
+                      <img src="icons/icons8-wifi-64.png" alt="" class="hotelIcon" />
+                    </li>
+                    <li>
+                      <div style="width: 100px"><p>unlimited WiFi✅</p></div>
+                    </li>
+                  </ul>        </div>
+                <br />
+                <div id="icon4" style="width: 30px; height: 50px; display: inline">
+                  <ul class="listicon">
+                    <li>
+                      <img src="icons/icons8-swimmer-50.png" alt="" class="hotelIcon" />
+                    </li>
+                    <li>
+                      <div style="width: 100px"><p>Swimming pool✅</p></div>
+                    </li>
+                  </ul>
+                        </div>
+                <div id="icon5" style="width: 30px; height: 50px; display: inline">
+                  <ul class="listicon">
+                    <li>
+                      <img src="icons/icons8-treadmill-48.png" alt="" class="hotelIcon" />
+                    </li>
+                    <li>
+                      <div style="width: 100px"><p>GYM ✖️</p></div>
+                    </li>
+                  </ul>        </div>
+              </div>
+              <br>
+          
+              </div>
+              <p id="pricepage1" ><div id="cost1">$100</div> per night</p>
+        
+        
+              <!-- div image----------- -->
+              <div id="div3"></div>
+              <!-- image----------- -->
+            </div>
+        
+            <p id="para1" onclick="view()">More Hotels...</p>
+                  
+            <!-- section 2 hotels information ------------- -->
+            <div id="section7">
+              <div class="hotelinfo">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- div 2 -->
+              <div class="hotelinfo2">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- div3 -->
+              <div class="hotelinfo3">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hotelinfo4">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- div 2 -->
+              <div class="hotelinfo5">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- div3 -->
+              <div class="hotelinfo6">
+                <div id="hotelimage"></div>
+                <div id="info">
+                  <h3><a class="page-link" href="../display-destination/Home.html?id=1">Go </a></h3>
+                  <ul>
+                    <li>
+                      Price :
+                      <div id="cost">$100</div>
+                    </li>
+                    <li>Rate : 4.2⭐⭐⭐⭐</li>
+                    <li>Best place: Pyramids</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- section 3 comments page ------------------- -->
+             <hr style="border-color: rgb(242, 193, 133);">
+            <div id="section8">
+              <h1 style="text-align: center; opacity: 0.6; ">Feedback</h1>
+              <div id="txtcomments">
+                <textarea name="comments" id="comments" rows="3" cols="70" placeholder="give us Your feedback" maxlength="150"></textarea>
+              <br>
+              <div id="btncomment1">
+                <button id="btncomment" name="btncomment" onclick="submit()">submit</button>
+              </div>
+              </div>
+              <div class="divcomments" id="divcom1">
+                
+                    <img src="icons/user_3.jpg" alt="" id="iconperson1">
+                    <p style="display: inline;" class="paracomment" id="p1"> 
+                     wao! it is amazing website!
+                    </p>
+                 
+              </div>
+              <div class="divcomments" id="divcom2">
+                
+                   
+                    <img src="icons/user_3.jpg" alt="" id="iconperson1">
+                    <p style="display: inline;" class="paracomment" id="p2">
+                     wao! it is amazing website!
+                    </p>
+                 
+              </div>
+              <div class="divcomments" id="divcom3">
+                
+                   
+                    <img src="icons/user_3.jpg" alt="" id="iconperson1">
+                    <p style="display: inline;" class="paracomment" id="p3">   
+                     wao! it is amazing website!
+                    </p>
+                 
+              </div>
+              <div class="divcomments" id="divcom4">
+                
+                   
+                    <img src="icons/user_3.jpg" alt="" id="iconperson1">
+                    <p style="display: inline;" class="paracomment" id="p4"> 
+                       wao! it is amazing website!
+                    </p>
+                 
+              </div>
+              <div class="divcomments" id="divcom5">
+                
+                   
+                    <img src="icons/user_3.jpg" alt="" id="iconperson1">
+                    <p style="display: inline;" class="paracomment" id="p5"> 
+                       wao! it is amazing website!
+                    </p>
+               
+              </div>
+        
+            </div>
+            <iframe src="footer.html" frameborder="0" width="100%" height="305px"></iframe>
+          
+
+    </div>
+    <!-- <div class="footer">
         <div class="brand">Adventure Travel</div>
         <ul>
             <li><a href="#about">About Us</a></li>
@@ -237,84 +480,8 @@
             <li><a href="#tourist-areas">Tourist Areas</a></li>
             <li><a href="../login-page/login.html">Login</a></li>
         </ul>
-    </div>
-    <script>
-        function validateSearchInput(input) {
-            const trimmedInput = input.trim();
-
-            if (trimmedInput === "") {
-                return "Input cannot be empty.";
-            }
-
-            return "Valid input.";
-        }
-       
-        const searchInput = document.querySelector('.header input[type="email"]');
-       
-        const searchButton = document.querySelector('.header button');
-
-        searchButton.addEventListener('click', () => {
-            const validationMessage = validateSearchInput(searchInput.value);
-            if (validationMessage === "Valid input.") {
-                console.log("Search initiated with:", searchInput.value);
-            } else {
-                alert(validationMessage); 
-            }
-        });
-
-        function createDeal(dealData, id) {
-            const container = document.getElementById(id).querySelector('.deals-container');
-
-            const dealDiv = document.createElement("div");
-            dealDiv.className = "deal";
-
-            const img = document.createElement("img");
-            img.src = dealData.imageUrl;
-            img.alt = dealData.title;
-
-            const infoDiv = document.createElement("div");
-            infoDiv.className = "info";
-
-            const title = document.createElement("h3");
-            title.textContent = dealData.title;
-
-            const description = document.createElement("p");
-            description.textContent = dealData.description;
-
-            const viewButton = document.createElement("a");
-            viewButton.href = dealData.link;
-            viewButton.className = "view-button";
-            viewButton.textContent = "View Deal";
-
-            infoDiv.appendChild(title);
-            infoDiv.appendChild(description);
-            dealDiv.appendChild(img);
-            dealDiv.appendChild(infoDiv);
-            dealDiv.appendChild(viewButton);
-
-            container.appendChild(dealDiv);
-        }
-
-        const deal1 = {
-            title: "Patagonia Wilderness Trek",
-            description: "7 days from $1,299",
-            imageUrl: "https://storage.googleapis.com/a1aa/image/ZYJTDqdmPHaXPZe4EA1yRRwmrBJOfdGX0PRGhKDK2pIyHw5TA.jpg",
-            link: "#"
-        };
-
-        const deal2 = {
-            title: "Alaskan Adventure Cruise",
-            description: "10 days from $2,499",
-            imageUrl: "https://storage.googleapis.com/a1aa/image/ZYJTDqdmPHaXPZe4EA1yRRwmrBJOfdGX0PRGhKDK2pIyHw5TA.jpg",
-            link: "#"
-        };
-
-        createDeal(deal1, 'Hotels');
-        createDeal(deal2, 'Places');
-        createDeal(deal1, 'Hotels');
-        createDeal(deal2, 'Places');
-        createDeal(deal1, 'Deals');
-        createDeal(deal2, 'Deals');
-    </script>
+    </div> -->
+    <script type="text/javascript" src="home-script.js"></script>
+    <script type="text/javascript" src="api.js"></script>
 </body>
 </html>

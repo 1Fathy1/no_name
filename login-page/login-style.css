@@ -7,15 +7,14 @@ body{
        justify-content: center;
        align-items: center;
        height: 100vh;
-          }
-          .contenter{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               width: 100;
-               max-width: 400px;
-
-          }
+}
+.contenter{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 50%;
+     max-width: 400px;
+}
           .form-box{
             background-color: #fff;
            border-radius: 8px;

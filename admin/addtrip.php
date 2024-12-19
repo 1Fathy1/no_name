@@ -2,7 +2,6 @@
 
     include("../autho/connectiondatabase.php");  
     $response = [] ;  
-    $response['submit'] = isset($_POST['submit']);
     if(isset($_POST['submit']) ){
       $sql = "INSERT INTO trip(destination_id, number_memer, hotel, date, duration, price) VALUES (:des_id , :num , :hotel , :date , :duration  , :price);" ; 
       try{
